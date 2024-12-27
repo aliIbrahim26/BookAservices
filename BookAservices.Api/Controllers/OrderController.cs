@@ -19,6 +19,7 @@ namespace BookAservices.Api.Controllers
         [HttpGet("GetListOrder")]
         public async Task<ActionResult> GetListOrder()
         {
+
             var result = await mediator.Send(new GetListOrderQuerry());
             return Ok(result);
         }
