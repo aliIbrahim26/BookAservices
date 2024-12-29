@@ -15,18 +15,19 @@ namespace BookAservices.Api.Controllers
             this.mediator = mediator;
         }
 
-        [HttpGet("GetOneOptionsDifference")]
-        public async Task<ActionResult> GetOneOptionsDifference(Guid id)
-        {
-            var result = new GetOneOptionsDifferenceQuerry() { Id = id };
-            return Ok(await mediator.Send(result));
-        }
 
         [HttpGet("GetList")]
         public async Task<ActionResult> GetList()
         {
             var result = await mediator.Send(new GetListOptionsDifferenceQuerry());
             return Ok(result);
+        }
+
+        [HttpGet("GetOneOptionsDifference")]
+        public async Task<ActionResult> GetOneOptionsDifference(Guid id)
+        {
+            var result = new GetOneOptionsDifferenceQuerry() { Id = id };
+            return Ok(await mediator.Send(result));
         }
 
         [HttpPost("CreateOptionsDifference")]
