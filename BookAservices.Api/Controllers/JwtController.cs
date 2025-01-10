@@ -1,10 +1,12 @@
 ﻿using BookAservices.Api.Models;
 using BookAservices.Api.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookAservices.Api.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class JwtController : ControllerBase
@@ -34,7 +36,7 @@ namespace BookAservices.Api.Controllers
             return Ok(result);
           
         }
-
+        
         [HttpPost("SignIn")]
         public async Task<ActionResult> SignIn([FromBody] SignIn model)
         {
@@ -68,7 +70,7 @@ namespace BookAservices.Api.Controllers
             return Ok(result);
 
         }
-
+        
         [HttpPost("addRoleInData")]
         public async Task<ActionResult> AddRoleINData([FromBody] string role)
         {

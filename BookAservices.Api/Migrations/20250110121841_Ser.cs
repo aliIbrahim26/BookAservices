@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BookAservices.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class S4 : Migration
+    public partial class Ser : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

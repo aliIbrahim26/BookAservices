@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookAservices.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241227134640_S4")]
-    partial class S4
+    [Migration("20250110121841_Ser")]
+    partial class Ser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
